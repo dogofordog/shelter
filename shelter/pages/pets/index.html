@@ -3,9 +3,140 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Cozy House - Shelter for pets in Boston</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <header class="header">
+         <a href="#" class="logo">
+            <span>Cozy House</span>
+            <span>Shelter for pets in Boston</span>
+            </a>
+
+       <nav class="nav">
+        <ul class="nav__list">
+            <li class="nav__item "><a href="../main/index.html" class="nav__link">About the shelter</a></li>
+            <li class="nav__item nav__item--active">Our pets</li>
+            <li class="nav__item"><a href="#help" class="nav__link">Help the shelter</a></li>
+            <li class="nav__item"><a href="#contacts" class="nav__link">Contacts</a></li>
+        </ul>
+
+       </nav>
+
+    </header>
+    <main class="main">
+<!-- section pets -->
+ <section class="pets">
+    <h1 class="pets__title">Our friends who<br>are looking for a house</h1>
     
+<div class="pets__cards">
+    <div class="pets__card">
+        <img src="../../assets/images/jennifer.png" alt="Jennifer the Dog" class="pets__img">
+        <p class="pets__name">Jennifer</p>
+        <a href="#" class="pets__button">Learn more</a>
+    </div>
+
+    <div class="pets__card">
+        <img src="../../assets/images/sophia.png" alt="Sophia the Dog" class="pets__img">
+        <p class="pets__name">Sophia</p>
+        <a href="#" class="pets__button">Learn more</a>
+    </div>
+
+    <div class="pets__card">
+        <img src="../../assets/images/woody.png" alt="Woody the Dog" class="pets__img">
+        <p class="pets__name">Woody</p>
+        <a href="#" class="pets__button">Learn more</a>
+    </div>
+
+    <div class="pets__card">
+        <img src="../../assets/images/scarlett.png" alt="Scarlett the Dog" class="pets__img">
+        <p class="pets__name">Scarlett</p>
+        <a href="#" class="pets__button">Learn more</a>
+    </div>
+
+    <div class="pets__card">
+        <img src="../../assets/images/katrine.png" alt="Katrine the Cat" class="pets__img">
+        <p class="pets__name">Katrine</p>
+        <a href="#" class="pets__button">Learn more</a>
+    </div>
+
+    <div class="pets__card">
+        <img src="../../assets/images/timmy.png" alt="Timmy the Cat" class="pets__img">
+        <p class="pets__name">Timmy</p>
+        <a href="#" class="pets__button">Learn more</a>
+    </div>
+
+    <div class="pets__card">
+        <img src="../../assets/images/freddie.png" alt="Freddie the Cat" class="pets__img">
+        <p class="pets__name">Freddie</p>
+        <a href="#" class="pets__button">Learn more</a>
+    </div>
+
+    <div class="pets__card">
+        <img src="../../assets/images/charly.png" alt="Charly the Dog" class="pets__img">
+        <p class="pets__name">Charly</p>
+        <a href="#" class="pets__button">Learn more</a>
+    </div>
+</div>
+<div class="pets__pagination">
+
+    <button class="pets__pagination-arrow pets__pagination-arrow--begin" disabled>
+        <img src="../../assets/icons/button_paginator_inactive.svg" alt="Go to first page" >
+    </button>
+
+<button class="pets__pagination-arrow pets__pagination-arrow--previous" disabled>
+    <img src="../../assets/icons/button_paginator_inactive-2.svg" alt="Previous page" >
+</button>
+
+ <span class="pets__pagination-current" aria-current="page">1</span>
+
+   <button class="pets__pagination-arrow pets__pagination-arrow--next">
+    <img src="../../assets/icons/button_paginator.svg" alt="Next page">
+</button>          
+
+<button class="pets__pagination-arrow pets__pagination-arrow--end">
+    <img src="../../assets/icons/button_paginator-2.svg" alt="Go to last page">
+</button>
+
+</div>
+</section>
+
+</main>
+<!-- section footer -->
+   <footer class="footer" id="contacts">
+    <div class="footer__left">
+        <h2 class="footer__title">For questions<br>and suggestions</h2>
+        
+        <div class="footer__contact-item">
+            <img src="../../assets/icons/icon-email.svg" alt="Email icon" class="footer__icon">
+            <a href="mailto:email@shelter.com">email@shelter.com</a>
+        </div>
+        
+        <div class="footer__contact-item">
+            <img src="../../assets/icons/phone.svg" alt="Phone icon" class="footer__icon">
+            <a href="tel:+136745677554">+13 674 567 75 54</a>
+        </div>
+    </div>
+
+    <div class="footer__right">
+        <h2 class="footer__title">We are waiting<br>for your visit</h2>
+        
+        <div class="footer__address-item">
+            <img src="../../assets/icons/locations.png" alt="Location pin icon" class="footer__icon">
+            <a href="https://www.google.com/maps?saddr=My+Location&daddr=1+Central+Street,+Boston">1 Central Street, Boston<br>(entrance from the store)</a>
+        </div>
+        
+        <div class="footer__address-item">
+            <img src="../../assets/icons/locations.png" alt="Location pin icon" class="footer__icon">
+            <a href="https://www.google.com/maps?saddr=My+Location&daddr=18+South+Park,+London">18 South Park, London</a>
+        </div>
+    </div>
+    
+    <div class="footer__dog-wrapper">
+        <img src="../../assets/images/footer-puppy.png" alt="Dog with tongue" class="footer__dog">
+    </div>
+</footer>
+    <!-- ------------- -->
+   <script src="script.js" defer></script> 
 </body>
 </html>
