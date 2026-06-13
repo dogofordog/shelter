@@ -4,13 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cozy House - Shelter for pets in Boston</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="../../assets/icons/heart.svg" type="image/svg+xml">
 </head>
 <body>
     <header class="header">
+        <div class="header__container">
          <a href="#" class="logo">
-            <span>Cozy House</span>
-            <span>Shelter for pets in Boston</span>
+            <span class="logo__main">Cozy House </span>
+            <span class="logo__sub">Shelter for pets in Boston</span>
             </a>
 
        <nav class="nav">
@@ -20,9 +25,8 @@
             <li class="nav__item"><a href="#help" class="nav__link">Help the shelter</a></li>
             <li class="nav__item"><a href="#contacts" class="nav__link">Contacts</a></li>
         </ul>
-
        </nav>
-
+        </div>
     </header>
 
 <!-- ------------- -->
@@ -30,35 +34,42 @@
 
         <!-- section hero -->
         <section class="hero">
+            <div class="hero__container">
             <div class="hero__left">
             <h1 class="hero__title">Not only people <br> need a house</h1>
 
             <p class="hero__content"> We offer to give a chance to a little and nice puppy with an extremely wide and open heart. He or she will love you more than anybody else in the world, you will see!</p>
 
-           <a class="hero__button" href="#pets">Make a friend</a>
+           <a class="hero__button" href="#pets"> <span class="hero__button-text">Make a friend</span></a>
 </div>
 <div class="hero__right">
     <img class="hero__img" src="../../assets/images/start-screen-puppy.png" alt="Puppy looking up">
 </div>
+            </div>
         </section>
 <!-- section about -->
         <section class="about">
+            <div class="about__container">
             <div class="about__left">
 <img class="about__pets" src="../../assets/images/about-pets.png" alt="Dog and cat sitting together">
             </div>
 
             <div class="about__content">
 <h2 class="about__title"> About the shelter <br> “Cozy House”</h2>
-<p>Currently we have 121 dogs and 342 cats on our hands and statistics show that only 20% of them will find a family. The others will continue to live with us and will be waiting for a lucky chance to become dearly loved.</p>
-<p>We feed our wards with the best food and make sure that they do not get sick, feel comfortable (including psychologically) and well. We are supported by 87 volunteers and 28 employees of various skill levels. About 12% of the animals are taken by the shelter staff. Taking care of the animals, they become attached to the pets and would hardly ever leave them alone.</p>
+<p class="about__sub1">Currently we have 121 dogs and 342 cats on our hands and statistics show that only 20% of them will find a family. The others will continue to live with us and will be waiting for a lucky chance to become dearly loved.</p>
+<p class="about__sub2">We feed our wards with the best food and make sure that they do not get sick, feel comfortable (including psychologically) and well. We are supported by 87 volunteers and 28 employees of various skill levels. About 12% of the animals are taken by the shelter staff. Taking care of the animals, they become attached to the pets and would hardly ever leave them alone.</p>
+            </div>
             </div>
         </section>
 <!-- section pets -->
  <section class="pets" id="pets">
+    <div class="pets__container">
     <h2 class="pets__title">Our friends who <br> are looking for a house</h2>
 <div class="pets__slider">
-    <button class="pets__arrow pets__arrow--left">
-<img src="../../assets/images/Arrow-left.png" alt="Previous pets">
+<button class="pets__arrow pets__arrow--left" aria-label="Previous pets">
+  <svg width="14" height="6" viewBox="0 0 14 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M14 4V2L3 2V0L0 3L3 6V4L14 4Z" fill="#292929"/>
+  </svg>
 </button>
 
 <div class="pets__cards">
@@ -80,11 +91,14 @@
     <a href="#" class="pets__button">Learn more</a>
     </div>
 </div>
-<button class="pets__arrow pets__arrow--right">
-    <img src="../../assets/images/Arrow-right.png" alt="Next pets">
+<button class="pets__arrow pets__arrow--right" aria-label="Next pets">
+  <svg width="14" height="6" viewBox="0 0 14 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 4V2L11 2V0L14 3L11 6V4L0 4Z" fill="#292929"/>
+  </svg>
 </button>
 </div>
 <a href="../pets/index.html" class="pets__all">Get to know the rest</a>
+</div>
 </section>
 <!-- section Help -->
 <section class="help" id="help">
