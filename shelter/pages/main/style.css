@@ -107,6 +107,11 @@ img {
     color: var(--color-light-xl);
     text-decoration: none;
     cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.nav__link:hover{
+    color: var(--color-primary);
 }
 
 .nav__item--active {
@@ -168,6 +173,11 @@ img {
     border-radius: 100px;
     padding: 15px 45px;
     background: var(--color-primary);
+    transition: ease 0.3s;
+}
+
+.hero__button:hover{
+background-color: var(--color-primary-light);
 }
 
 .hero__button-text {
@@ -225,7 +235,6 @@ img {
     width: 100%;
     background: var(--color-light-l);       
     height: 877px;
-
 }
 .pets__container{
     display: flex;
@@ -267,7 +276,14 @@ color: var(--color-dark-l);
     width: 270px;
     height: 435px;
     background: var(--color-light-s);
+    transition: box-shadow 0.3s ease;
 }
+.pets__card:hover {
+box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+background: var(--color-light-s);
+
+}
+
 .pets__name{
 font-family: var(--font-main);
 font-weight: 400;
@@ -290,9 +306,11 @@ font-size: 15px;
 line-height: 130%;
 letter-spacing: 0.06em;
 color: var(--color-dark-3xl);
-text-align: center;
-    
-    
+text-align: center;  
+transition: ease 0.3s; 
+}
+.pets__button:hover{
+    background-color: var(--color-primary);
 }
 
 .pets__all{
@@ -309,6 +327,11 @@ text-align: center;
     line-height: 130%;
     letter-spacing: 0.06em;
     color: var(--color-dark-3xl);
+    transition: ease 0.3s;
+}
+
+.pets__all:hover{
+    background-color: var(--color-primary-light);
 }
 
 .pets__arrow{
