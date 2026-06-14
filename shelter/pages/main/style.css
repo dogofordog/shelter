@@ -277,20 +277,20 @@ text-align: center;
 color: var(--color-dark-l);
 }
 .pets__button{
-    display: inline-block;
-    align-self: flex-start;
-    text-decoration: none;
-    border: 2px solid var(--color-primary);
-    border-radius: 100px;
-    padding: 15px 45px;
-    width: 187px;
-    height: 52px;
-    font-family: var(--font-main);
-    font-size: 15px;
-    line-height: 130%;
-    letter-spacing: 0.06em;
-    color: var(--color-dark-3xl);
-    text-align: center;
+display: inline-block;
+align-self: flex-start;
+text-decoration: none;
+border: 2px solid var(--color-primary);
+border-radius: 100px;
+padding: 15px 45px;
+width: 187px;
+height: 52px;
+font-family: var(--font-main);
+font-size: 15px;
+line-height: 130%;
+letter-spacing: 0.06em;
+color: var(--color-dark-3xl);
+text-align: center;
     
     
 }
@@ -324,6 +324,198 @@ color: var(--color-dark-l);
     flex-shrink: 0;
 
 }
+.help{
+width: 100%;
+background: var(--color-light-xl);
+}
 
+.help__content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 40px;
+}
+.help__title{
+font-family: var(--font-main);
+font-weight: 400;
+font-size: 35px;
+line-height: 130%;
+letter-spacing: 0.06em;
+text-align: center;
+color: var(--color-dark-l);
+}
+.help__list{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    gap:30px;
+    flex-wrap: wrap;
 
+}
+.help__item{ 
+    display: flex;
+    flex: 0 0 180px;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    font-family: var(--font-main);
+    gap: 30px;
+}
+.help__text{
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 115%;
+    letter-spacing: 0.06em;
+    text-align: center;
+    color: var(--color-dark-l);
+}
+.donation{
+    width: 100%;
+    background: var(--color-light-l);
+}
+.donation__content{
+    display: flex;
+    align-items: center;
+    max-width: 915px;
+    margin: 0 auto;
+    gap: 30px;
+    padding: 90px 0;
+}
 
+.donation__dog {
+    width: 505px; /* Как в Figma */
+    height: auto; /* Чтобы пропорции не исказились */
+}
+
+.donation__right{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+}
+
+.donation__title{
+font-family: var(--font-main);
+font-weight: 400;
+font-size: 35px;
+line-height: 130%;
+letter-spacing: 0.06em;
+color: var(--color-dark-l);
+}
+.donation__label{
+font-family: var(--font-main);
+font-weight: 400;
+font-size: 15px;
+line-height: 110%;
+letter-spacing: 0.06em;
+color: var(--color-dark-l);
+}
+
+.donation__disclaimer{
+font-family: var(--font-second);
+font-style: italic;
+font-weight: 400;
+font-size: 12px;
+line-height: 150%;
+color: var(--color-dark-m);
+}
+.donation__card{
+display: flex;
+justify-content: center;
+align-items: center;
+border-radius: 9px;
+padding: 10px 15px;
+gap: 15px;
+width: 100%;
+background: var(--color-primary);
+}
+
+.donation__card-number{
+font-family: var(--font-main);
+font-weight: 400;
+font-size: 20px;
+line-height: 115%;
+letter-spacing: 0.06em;
+color: var(--color-dark-l);
+}
+.footer{
+    width: 100%;
+    background-image: 
+        url('../../assets/images/footer-gradient-background.png'),
+        url('../../assets/images/footer-background.png');
+    background-repeat: no-repeat, no-repeat;
+    background-position: center, center;
+    background-size: cover, cover;
+    background-color: var(--footer-gradient-background);
+}
+
+.footer__container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 160px;
+    max-width: 1280px;
+    margin: 0 auto; 
+    padding: 40px 40px 0 ; 
+}
+.footer__left{
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+gap: 40px;
+}
+.footer__title{
+font-family: var(--font-main);
+font-weight: 400;
+font-size: 35px;
+line-height: 130%;
+letter-spacing: 0.06em;
+color: var(--color-light-xl);
+}
+.footer__contact-item{
+display: flex;
+justify-content: center;
+align-items: center;    
+gap:20px;
+font-family: var(--font-main);
+font-weight: 400;
+font-size: 20px;
+line-height: 115%;
+letter-spacing: 0.06em;
+color: var(--color-primary);
+}
+.footer__dog {
+    width: 300px;
+    height: 310px;
+}
+.footer__contact-item a{
+    text-decoration: none;
+    color: var(--color-primary);
+}
+
+.footer__right{
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+gap: 40px;
+}
+.footer__address-item{
+display: flex;
+justify-content: center;
+align-items: center;    
+gap:20px;
+font-family: var(--font-main);
+font-weight: 400;
+font-size: 20px;
+line-height: 115%;
+letter-spacing: 0.06em;
+color: var(--color-primary);
+}
+.footer__address-item a{
+    text-decoration: none;
+    color: var(--color-primary);
+
+}
