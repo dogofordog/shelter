@@ -464,13 +464,18 @@ width: 100%;
 background: var(--color-primary);
 }
 
-.donation__card-number{
-font-family: var(--font-main);
-font-weight: 400;
-font-size: 20px;
-line-height: 115%;
-letter-spacing: 0.06em;
-color: var(--color-dark-l);
+.donation__card-number {
+    font-family: var(--font-main);
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 115%;
+    letter-spacing: 0.06em;
+    color: var(--color-dark-l);
+    text-decoration: none;
+    display: inline-block;
+}
+.donation__card-number:hover {
+    color: var(--color-dark-3xl);
 }
 .footer{
     width: 100%;
