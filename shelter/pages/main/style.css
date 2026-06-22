@@ -318,6 +318,7 @@ img {
   width: 260px;
   height: 271px;
 }
+}
 /* About */
 .about {
   width: 100%;
@@ -608,27 +609,36 @@ img {
 @media (max-width: 767.98px) {
   .pets {
     height: 791px;
-    overflow: visible;
   }
   .pets__container {
     padding: 42px 10px;
     max-width: 300px;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0; /* убираем общий gap, управляем вручную */
   }
   .pets__title {
     font-size: 25px;
     text-align: center;
-    margin-bottom: 42px;
-    padding-top: 17px;
+    margin-bottom: 42px;   /* от заголовка до карточки */
+    padding-top: 0;        /* убираем лишний отступ */
   }
   .pets__slider {
+    width: 270px;
+    height: auto;          /* высота по содержимому, не фиксируем */
+    display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 49px;
+    gap: 20px;             /* между карточкой и стрелками */
   }
   .pets__cards {
     max-width: 270px;
     gap: 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
   }
   .pets__card {
     width: 270px;
@@ -636,22 +646,39 @@ img {
   }
   .pets__card:nth-child(2),
   .pets__card:nth-child(3) {
-    display: none;
+    display: none;         /* показываем только первую карточку */
   }
+  /* Стрелки теперь видны и расположены в ряд */
   .pets__arrow {
-    display: none;
+    display: flex;         /* гарантируем видимость */
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    width: 52px;
+    height: 52px;
+    border: 2px solid var(--color-primary);
+    border-radius: 100px;
+    background: transparent;
+    cursor: pointer;
+    flex-shrink: 0;
+  }
+  .pets__arrow:hover {
+    background: var(--color-primary-light);
+    border-color: var(--color-primary-light);
   }
   .pets__arrows {
     display: flex;
     justify-content: center;
-    gap: 80px;
+    gap: 80px;             /* как в макете */
     margin-top: 0;
+    width: 100%;
   }
   .pets__all {
-    margin-top: 0.8em;
+    margin-top: 42px;      /* от стрелок до кнопки */
     width: 260px;
     padding: 15px 45px;
     text-align: center;
+    align-self: center;
   }
 }
 
