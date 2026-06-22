@@ -276,7 +276,6 @@ img {
 @media (max-width: 767.98px) {
   .hero {
     height: 823px;
-    /* overflow: hidden; */
   }
   .hero__container {
     flex-direction: column;
@@ -284,16 +283,12 @@ img {
     padding-top: 150px;
     max-width: 300px;
     width: 300px;
-    /* margin: 0 auto; */
     height: auto;
     gap: 42px;
   }
   .hero__left {
     width: 300px;
-    /* height: 296px;   */
     padding-top: 0;
-    /* align-items: center;
-    text-align: center;*/
     gap: 42px;
   }
   .hero__title {
@@ -389,49 +384,80 @@ img {
     max-width: 430px;
   }
 }
-
 @media (max-width: 767.98px) {
   .about {
     height: 974px;
+    background: var(--color-light-xl);
   }
+
   .about__container {
-    flex-direction: column-reverse;
-    gap: 0;
-    padding: 0;
-    max-width: 300px;
-    margin: 0 auto;
+    display: flex;
+    flex-direction: column-reverse; 
     align-items: center;
+    justify-content: center;         
+    max-width: 300px;
+    width: 300px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 42px 0;                
+    box-sizing: border-box;
+    gap: 0;                        
   }
+
   .about__left {
     margin-left: 0;
-    padding-bottom: 35px;
+    padding: 0;
+    margin-top: 30px;               
+    display: flex;
+    justify-content: center;
+    width: 100%;
   }
+
   .about__pets {
     width: 260px;
-    height: 22.2rem;
+    height: auto;                  
+    max-width: 100%;
+    object-fit: contain;
   }
+
   .about__content {
     max-width: 300px;
-    padding: 40px 0 0;
+    width: 100%;
+    padding: 0;
     text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;           
   }
+
   .about__title {
     font-size: 25px;
-    text-align: center;
+    line-height: 130%;
     letter-spacing: 0.05em;
-    padding: 0 1em;
-    margin: 0;
+    text-align: center;
+    padding: 0;                   
+    margin: 0 0 25px 0;            
+    width: 100%;
   }
+
   .about__content p {
     font-size: 15px;
-    text-align: justify;
-    padding: 0 25px;
+    line-height: 160%;
+    text-align: justify;            
+    padding: 0 15px;             
+    margin: 0;
+    width: 100%;
+    box-sizing: border-box;
   }
-  .about__content p:last-child {
-    margin-top: 22px;
+
+  .about__content p:first-of-type {
+    margin-bottom: 22px;           
+  }
+
+  .about__content p:last-of-type {
+    margin-bottom: 0;
   }
 }
-
 /* Pets */
 .pets {
   width: 100%;
