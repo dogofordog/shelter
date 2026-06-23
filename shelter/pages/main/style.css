@@ -30,10 +30,7 @@ html {
   scroll-behavior: smooth;
 }
 
-h1,
-h2,
-h3,
-h4 {
+h1, h2, h3, h4 {
   font-family: var(--font-main);
   font-weight: 400;
 }
@@ -63,7 +60,7 @@ img {
 }
 .header__container {
   display: flex;
-  gap: 573px;
+  justify-content: space-between;
   align-items: center;
   max-width: 1280px;
   margin: 0 auto;
@@ -306,19 +303,20 @@ img {
   .hero__button {
     align-self: center;
   }
-.hero__right {
-  position: relative;
-  width: 100%;
-  height: 100%;
+  .hero__right {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  .hero__img {
+    position: absolute;
+    left: 40px;
+    top: 60px;
+    width: 260px;
+    height: 271px;
+  }
 }
-.hero__img {
-  position: absolute;
-  left: 40px;
-  top: 60px;
-  width: 260px;
-  height: 271px;
-}
-}
+
 /* About */
 .about {
   width: 100%;
@@ -327,6 +325,7 @@ img {
 .about__container {
   display: flex;
   align-items: center;
+  flex-direction: column;
   gap: 120px;
   max-width: 1280px;
   margin: 0 auto;
@@ -385,80 +384,50 @@ img {
     max-width: 430px;
   }
 }
+
 @media (max-width: 767.98px) {
   .about {
     height: 974px;
-    background: var(--color-light-xl);
   }
-
   .about__container {
-    display: flex;
-    flex-direction: column-reverse; 
-    align-items: center;
-    justify-content: center;         
+    flex-direction: column-reverse;
+    gap: 0;
+    padding: 42px 0;
     max-width: 300px;
-    width: 300px;
-    height: 100%;
     margin: 0 auto;
-    padding: 42px 0;                
-    box-sizing: border-box;
-    gap: 0;                        
+    align-items: center;
   }
-
   .about__left {
     margin-left: 0;
+    margin-top: 30px;
     padding: 0;
-    margin-top: 30px;               
-    display: flex;
-    justify-content: center;
-    width: 100%;
   }
-
   .about__pets {
     width: 260px;
-    height: auto;                  
-    max-width: 100%;
-    object-fit: contain;
+    height: auto;
   }
-
   .about__content {
     max-width: 300px;
-    width: 100%;
     padding: 0;
     text-align: left;
-    display: flex;
-    flex-direction: column;
-    align-items: center;           
   }
-
   .about__title {
     font-size: 25px;
-    line-height: 130%;
-    letter-spacing: 0.05em;
     text-align: center;
-    padding: 0;                   
-    margin: 0 0 25px 0;            
-    width: 100%;
+    margin-bottom: 25px;
+    padding: 0;
   }
-
   .about__content p {
     font-size: 15px;
-    line-height: 160%;
-    text-align: justify;            
-    padding: 0 15px;             
+    text-align: justify;
+    padding: 0 15px;
     margin: 0;
-    width: 100%;
-    box-sizing: border-box;
   }
-
   .about__content p:first-of-type {
-    margin-bottom: 22px;           
-  }
-
-  .about__content p:last-of-type {
-    margin-bottom: 0;
+    margin-bottom: 22px;
   }
 }
+
 /* Pets */
 .pets {
   width: 100%;
@@ -516,7 +485,6 @@ img {
 .pets__img {
   border-radius: 9px 9px 0 0;
   width: 270px;
-  max-width: 270px;
   height: 270px;
   object-fit: contain;
 }
@@ -548,6 +516,7 @@ img {
 .pets__button:hover {
   background: var(--color-primary);
 }
+
 .pets__arrow {
   display: flex;
   align-items: center;
@@ -560,18 +529,22 @@ img {
   cursor: pointer;
   flex-shrink: 0;
 }
+.slider__controls-mobile{
+  display: none;
+}
 .pets__arrow:hover {
   background: var(--color-primary-light);
   border-color: var(--color-primary-light);
   transition: 0.3s ease;
 }
+
 .pets__all {
   display: inline-block;
   text-decoration: none;
   border-radius: 100px;
   padding: 15px 45px;
   height: 52px;
-  margin-bottom: 20px;
+  margin-bottom: 60px;
   background: var(--color-primary);
   font-family: var(--font-main);
   font-weight: 400;
@@ -605,80 +578,110 @@ img {
     display: none;
   }
 }
-
 @media (max-width: 767.98px) {
   .pets {
     height: 791px;
   }
+
   .pets__container {
-    padding: 42px 10px;
+    padding: 42px 0;
+    padding-bottom: 0;
+    width: 100%;
     max-width: 300px;
     margin: 0 auto;
     display: flex;
+    gap: 42px;
     flex-direction: column;
     align-items: center;
-    gap: 0; /* убираем общий gap, управляем вручную */
   }
+
   .pets__title {
-    font-size: 25px;
-    text-align: center;
-    margin-bottom: 42px;   /* от заголовка до карточки */
-    padding-top: 0;        /* убираем лишний отступ */
+   font-weight: 400;
+font-size: 25px;
+line-height: 130%;
+letter-spacing: 0.06em;
+text-align: center;
   }
+
   .pets__slider {
-    width: 270px;
-    height: auto;          /* высота по содержимому, не фиксируем */
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;             /* между карточкой и стрелками */
-  }
-  .pets__cards {
-    max-width: 270px;
-    gap: 0;
-    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     width: 100%;
+    max-width: 270px;
   }
+
+  .pets__cards {
+    width: 100%;
+    max-width: 270px;
+    display: flex;
+    justify-content: center;
+  }
+
   .pets__card {
-    width: 270px;
-    height: 435px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    max-width: 270px;
+    background: var(--color-light-s);
+    flex-direction: column;
+    align-items: center;
   }
+
+  .pets__cards img {
+    border-radius: 9px 9px 0 0;
+    width: 100%;
+    max-width: 270px;
+    height: 270px;
+    object-fit: contain;
+  }
+
   .pets__card:nth-child(2),
   .pets__card:nth-child(3) {
-    display: none;         /* показываем только первую карточку */
+    display: none;
   }
-  /* Стрелки теперь видны и расположены в ряд */
+
   .pets__arrow {
-    display: flex;         /* гарантируем видимость */
+    display: none;
+  }
+
+  .mobile__arrow {
+    display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: row;
     width: 52px;
     height: 52px;
-    border: 2px solid var(--color-primary);
     border-radius: 100px;
+    border: 2px solid var(--color-primary);
     background: transparent;
     cursor: pointer;
     flex-shrink: 0;
+    transition: 0.3s ease;
   }
-  .pets__arrow:hover {
+
+  .mobile__arrow:hover {
     background: var(--color-primary-light);
     border-color: var(--color-primary-light);
   }
-  .pets__arrows {
+
+  .slider__controls-mobile {
     display: flex;
+    margin-top: 20px;
     justify-content: center;
-    gap: 80px;             /* как в макете */
-    margin-top: 0;
+    gap: 80px; /* по макету 80px, у вас было 60px – оставляем 80px для соответствия */
     width: 100%;
+    margin-top: 20px;
   }
+
+
   .pets__all {
-    margin-top: 42px;      /* от стрелок до кнопки */
+    overflow: hidden;
     width: 260px;
-    padding: 15px 45px;
+    max-width: 100%;
+    padding: 15px 20px;
+    white-space: nowrap;
     text-align: center;
-    align-self: center;
   }
 }
 
@@ -709,13 +712,14 @@ img {
 .help__list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: start;
+  justify-content: center;
   gap: 55px 120px;
   max-width: 1030px;
 }
 .help__item {
   display: flex;
   flex-direction: column;
+  align-items: center;
   list-style: none;
   gap: 30px;
 }
