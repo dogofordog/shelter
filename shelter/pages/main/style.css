@@ -391,7 +391,7 @@ img {
   }
   .about__container {
     flex-direction: column-reverse;
-    gap: 0;
+    gap: 42px;
     padding: 42px 0;
     max-width: 300px;
     margin: 0 auto;
@@ -399,7 +399,6 @@ img {
   }
   .about__left {
     margin-left: 0;
-    margin-top: 30px;
     padding: 0;
   }
   .about__pets {
@@ -410,7 +409,9 @@ img {
     max-width: 300px;
     padding: 0;
     text-align: left;
+    
   }
+
   .about__title {
     font-size: 25px;
     text-align: center;
@@ -420,8 +421,8 @@ img {
   .about__content p {
     font-size: 15px;
     text-align: justify;
-    padding: 0 15px;
     margin: 0;
+    padding: 0 15px;
   }
   .about__content p:first-of-type {
     margin-bottom: 22px;
@@ -677,6 +678,7 @@ text-align: center;
 
   .pets__all {
     overflow: hidden;
+    margin: 0 auto;
     width: 260px;
     max-width: 100%;
     padding: 15px 20px;
@@ -775,20 +777,18 @@ text-align: center;
     padding: 42px 10px;
     max-width: 300px;
     margin: 0 auto;
+    gap: 42px;
   }
   .help__title {
     font-size: 25px;
     text-align: center;
-    margin-top: 42px;
     max-width: 260px;
   }
   .help__list {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 16px 30px;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 30px;
     max-width: 290px;
-    padding: 15px 0;
-    margin: 0 auto;
     justify-items: center;
   }
   .help__item {
@@ -809,6 +809,9 @@ text-align: center;
     height: 50px;
     margin-bottom: 5px;
   }
+  .help__item {
+    gap: 15px;
+}
   .help__text {
     font-size: 15px;
     line-height: 110%;
@@ -816,6 +819,7 @@ text-align: center;
     text-align: center;
   }
 }
+
 
 /* Donation */
 .donation {
@@ -911,11 +915,10 @@ text-align: center;
   }
   .donation__content {
     flex-direction: column-reverse;
-    gap: 42px;
+    justify-content: flex-start;
     padding: 42px 10px;
     max-width: 300px;
-    margin: 0 auto;
-    align-items: center;
+    height: 100%; 
   }
   .donation__dog {
     width: 260px;
@@ -923,15 +926,17 @@ text-align: center;
   }
   .donation__right {
     align-items: center;
+    padding: 10px 0;
+    gap: 20px;
     text-align: center;
     max-width: 300px;
-    max-height: 281px;
+    width: 100%;  
   }
   .donation__title {
-    font-size: 25px;
-    letter-spacing: 0.06em;
-    text-align: center;
-    padding-top: 10px;
+  font-size: 25px;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+  text-align: center;
   }
   .donation__label {
     font-size: 15px;
@@ -941,7 +946,6 @@ text-align: center;
   .donation__card {
     width: 281px;
     height: 43px;
-    padding: 10px 15px;
   }
   .donation__card-number {
     font-size: 15px;
@@ -950,8 +954,9 @@ text-align: center;
     font-size: 12px;
     line-height: 150%;
     text-align: justify;
-    padding: 0 0.9em;
     max-width: 280px;
+    padding: 10p 0;
+    
   }
 }
 
