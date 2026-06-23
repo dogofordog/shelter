@@ -325,7 +325,7 @@ img {
 .about__container {
   display: flex;
   align-items: center;
-  flex-direction: column;
+  /* flex-direction: column; */
   gap: 120px;
   max-width: 1280px;
   margin: 0 auto;
@@ -714,7 +714,6 @@ text-align: center;
 .help__list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   gap: 55px 120px;
   max-width: 1030px;
 }
@@ -1042,6 +1041,12 @@ text-align: center;
   height: 310px;
   object-fit: contain;
 }
+.break-default {
+  display: inline;
+}
+.break-320 {
+  display: none;
+}
 
 @media (min-width: 768px) and (max-width: 1279.98px) {
   .footer {
@@ -1079,25 +1084,120 @@ text-align: center;
     height: 310px;
   }
 }
-
+.break-default {
+  display: inline;
+}
+.break-320 {
+  display: none;
+}
 @media (max-width: 767.98px) {
   .footer {
     height: 809px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .footer__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20px 10px 0;
+    max-width: 300px;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+
+  /* Оба блока занимают 100% ширины контейнера */
+  .footer__left,
+  .footer__right {
+    width: 100%;               /* вместо max-width */
+    margin: 0 !important;
+    padding: 0 !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer__left {
+    gap: 40px;
+  }
+
+  .footer__right {
+    gap: 40px;
+    margin-top: 20px;          /* отступ между блоками */
+  }
+
+  .footer__title {
+   font-weight: 400;
+   font-size: 25px;
+   line-height: 130%;
+   letter-spacing: 0.06em;
+   text-align: center;
+    margin: 0;
+  }
+
+  .footer__contact-item,
+  .footer__address-item {
+    gap: 20px;
+    justify-content: center;
+    margin: 0;
+    width: 100%;               /* чтобы элементы занимали всю ширину */
+  }
+
+  .footer__contact-item a,
+  .footer__address-item a {
+    font-size: 20px;
+    margin: 0;
+    text-align: center;
+    word-break: break-word;    /* защита от вылезания длинных слов */
+  }
+
+  /* Собака – абсолютно, прижата к низу */
+  .footer__dog-wrapper {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 260px;
+    height: 269px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .footer__dog {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}@media (max-width: 767.98px) {
+    .break-default {
+    display: none;
+  }
+  .break-320 {
+    display: inline;
+  }
+  .footer {
+    height: 809px;
+    position: relative;
   }
   .footer__container {
     flex-direction: column;
     align-items: center;
+    justify-content: flex-start;
     padding: 30px 10px 0;
-    max-width: 300px;
+    max-width: 320px;
     margin: 0 auto;
     height: 100%;
+    gap: 40px;
   }
   .footer__left {
     width: 100%;
-    max-width: 259px;
+    max-width: 258px;
     padding-right: 0;
     align-items: center;
-    margin-top: 30px;
     gap: 40px;
   }
   .footer__right {
@@ -1106,29 +1206,46 @@ text-align: center;
     padding-left: 0;
     padding-right: 0;
     align-items: center;
-    margin-top: 24px;
-    gap: 33px;
+    gap: 40px;
   }
   .footer__title {
+    font-weight: 400;
     font-size: 25px;
+    line-height: 130%;
+    letter-spacing: 0.06em;
     text-align: center;
-    padding: 0 10px;
-    margin-top: 0;
   }
-  .footer__contact-item,
+  .footer__contact-item{
+       gap: 20px;
+    justify-content: center;
+  }
+
   .footer__address-item {
     gap: 20px;
-    justify-content: center;
+    justify-content: flex-start;
   }
   .footer__contact-item a,
   .footer__address-item a {
     font-size: 20px;
   }
+  .footer__address-item a {
+    font-size: 20px;
+    margin: 0;
+    white-space: nowrap;          /* текст в одну строку */
+    overflow: hidden;            /* обрезаем лишнее */
+    text-overflow: ellipsis;     /* добавляем ... если не влезает */
+    max-width: 100%;             /* не вылезает за блок */
+    display: block;
+  }
   .footer__dog-wrapper {
-    align-self: center;
-    margin-top: 40px;
-    position: static;
-    transform: none;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 260px;
+    height: 269px;
+    margin: 0;
+    padding: 0;
   }
   .footer__dog {
     width: 260px;
