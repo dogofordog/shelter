@@ -34,16 +34,20 @@ h1, h2, h3, h4 {
   font-family: var(--font-main);
   font-weight: 400;
 }
+
 p {
   font-family: var(--font-second);
   font-weight: 400;
 }
+
 a {
   font-family: var(--font-second);
 }
+
 body {
   font-family: var(--font-second);
 }
+
 img {
   display: block;
   border: none;
@@ -58,6 +62,7 @@ img {
   width: 100%;
   z-index: 1;
 }
+
 .header__container {
   display: flex;
   justify-content: space-between;
@@ -67,6 +72,7 @@ img {
   padding: 0 40px;
   height: 60px;
 }
+
 .logo {
   display: flex;
   flex-direction: column;
@@ -76,6 +82,7 @@ img {
   height: 60px;
   gap: 0.667rem;
 }
+
 .logo__main {
   font-family: var(--font-main);
   font-size: 32px;
@@ -84,11 +91,13 @@ img {
   color: var(--color-primary);
   white-space: nowrap;
 }
+
 .logo__sub {
   font-size: 13px;
   letter-spacing: 0.1em;
   color: var(--color-light-xl);
 }
+
 .nav__list {
   display: flex;
   align-items: center;
@@ -100,6 +109,7 @@ img {
   font-size: 15px;
   line-height: 160%;
 }
+
 .nav__link {
   font-family: var(--font-second);
   font-weight: 400;
@@ -110,9 +120,11 @@ img {
   cursor: pointer;
   transition: 0.3s ease;
 }
+
 .nav__link:hover {
   color: var(--color-primary);
 }
+
 .nav__item--active {
   font-family: var(--font-second);
   color: var(--color-light-s);
@@ -122,6 +134,7 @@ img {
   height: 27px;
   padding-bottom: 5px;
 }
+
 .burger {
   display: none;
   flex-direction: column;
@@ -133,6 +146,7 @@ img {
   cursor: pointer;
   padding: 0;
 }
+
 .burger__line {
   display: block;
   width: 100%;
@@ -181,6 +195,7 @@ img {
   background-size: cover, cover;
   background-color: var(--start-screen-gradient-background);
 }
+
 .hero__container {
   display: flex;
   justify-content: space-between;
@@ -192,6 +207,7 @@ img {
   gap: 42px;
   box-sizing: border-box;
 }
+
 .hero__left {
   display: flex;
   flex-direction: column;
@@ -199,6 +215,7 @@ img {
   gap: 42px;
   width: 460px;
 }
+
 .hero__title {
   font-family: var(--font-main);
   font-weight: 400;
@@ -206,6 +223,7 @@ img {
   line-height: 130%;
   color: var(--color-light-xl);
 }
+
 .hero__content {
   font-family: var(--font-second);
   font-weight: 400;
@@ -213,6 +231,7 @@ img {
   line-height: 160%;
   color: var(--color-dark-s);
 }
+
 .hero__button {
   display: inline-block;
   align-self: flex-start;
@@ -222,9 +241,11 @@ img {
   background: var(--color-primary);
   transition: ease 0.3s;
 }
+
 .hero__button:hover {
   background-color: var(--color-primary-light);
 }
+
 .hero__button-text {
   font-family: var(--font-main);
   font-size: 17px;
@@ -232,11 +253,13 @@ img {
   letter-spacing: 0.06em;
   color: var(--color-dark-3xl);
 }
+
 .hero__right {
   display: flex;
   align-items: flex-start;
   flex: 1;
 }
+
 .hero__img {
   width: 100%;
   max-width: 698px;
@@ -322,29 +345,33 @@ img {
   width: 100%;
   background: var(--color-light-xl);
 }
+
 .about__container {
   display: flex;
   align-items: center;
-  /* flex-direction: column; */
   gap: 120px;
   max-width: 1280px;
   margin: 0 auto;
   padding: 80px 40px 100px 40px;
 }
+
 .about__left {
   margin-left: 175px;
   flex: 0 0 auto;
 }
+
 .about__pets {
   width: 300px;
   max-width: 300px;
   height: 408px;
   object-fit: contain;
 }
+
 .about__content {
   flex: 1;
   max-width: 430px;
 }
+
 .about__title {
   font-family: var(--font-main);
   font-weight: 400;
@@ -354,6 +381,7 @@ img {
   color: var(--color-dark-l);
   margin-bottom: 25px;
 }
+
 .about__content p {
   font-family: var(--font-second);
   font-weight: 400;
@@ -362,6 +390,7 @@ img {
   color: var(--color-dark-xl);
   margin-bottom: 25px;
 }
+
 .about__content p:last-child {
   margin-bottom: 0;
 }
@@ -409,9 +438,7 @@ img {
     max-width: 300px;
     padding: 0;
     text-align: left;
-    
   }
-
   .about__title {
     font-size: 25px;
     text-align: center;
@@ -436,6 +463,7 @@ img {
   height: 877px;
   overflow: hidden;
 }
+
 .pets__container {
   display: flex;
   flex-direction: column;
@@ -445,6 +473,7 @@ img {
   margin: 0 auto;
   padding: 80px 40px;
 }
+
 .pets__title {
   font-family: var(--font-main);
   font-weight: 400;
@@ -454,6 +483,7 @@ img {
   text-align: center;
   color: var(--color-dark-l);
 }
+
 .pets__slider {
   display: flex;
   align-items: center;
@@ -461,6 +491,7 @@ img {
   justify-content: space-between;
   width: 100%;
 }
+
 .pets__cards {
   display: flex;
   justify-content: center;
@@ -468,6 +499,7 @@ img {
   margin: 0 auto;
   gap: 90px;
 }
+
 .pets__card {
   display: flex;
   flex-direction: column;
@@ -480,15 +512,18 @@ img {
   transition: 0.5s;
   overflow: hidden;
 }
+
 .pets__card:hover {
   box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
 }
+
 .pets__img {
   border-radius: 9px 9px 0 0;
   width: 270px;
   height: 270px;
   object-fit: contain;
 }
+
 .pets__name {
   font-family: var(--font-main);
   font-size: 20px;
@@ -497,6 +532,7 @@ img {
   color: var(--color-dark-l);
   margin-top: 25px;
 }
+
 .pets__button {
   display: inline-flex;
   align-items: center;
@@ -514,6 +550,7 @@ img {
   white-space: nowrap;
   transition: ease 0.3s;
 }
+
 .pets__button:hover {
   background: var(--color-primary);
 }
@@ -530,9 +567,11 @@ img {
   cursor: pointer;
   flex-shrink: 0;
 }
-.slider__controls-mobile{
+
+.slider__controls-mobile {
   display: none;
 }
+
 .pets__arrow:hover {
   background: var(--color-primary-light);
   border-color: var(--color-primary-light);
@@ -555,6 +594,7 @@ img {
   color: var(--color-dark-3xl);
   transition: ease 0.5s;
 }
+
 .pets__all:hover {
   background-color: var(--color-primary-light);
 }
@@ -579,11 +619,11 @@ img {
     display: none;
   }
 }
+
 @media (max-width: 767.98px) {
   .pets {
     height: 791px;
   }
-
   .pets__container {
     padding: 42px 0;
     padding-bottom: 0;
@@ -595,15 +635,13 @@ img {
     flex-direction: column;
     align-items: center;
   }
-
   .pets__title {
-   font-weight: 400;
-font-size: 25px;
-line-height: 130%;
-letter-spacing: 0.06em;
-text-align: center;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 130%;
+    letter-spacing: 0.06em;
+    text-align: center;
   }
-
   .pets__slider {
     display: flex;
     flex-wrap: wrap;
@@ -611,14 +649,12 @@ text-align: center;
     width: 100%;
     max-width: 270px;
   }
-
   .pets__cards {
     width: 100%;
     max-width: 270px;
     display: flex;
     justify-content: center;
   }
-
   .pets__card {
     display: flex;
     align-items: center;
@@ -629,7 +665,6 @@ text-align: center;
     flex-direction: column;
     align-items: center;
   }
-
   .pets__cards img {
     border-radius: 9px 9px 0 0;
     width: 100%;
@@ -637,16 +672,13 @@ text-align: center;
     height: 270px;
     object-fit: contain;
   }
-
   .pets__card:nth-child(2),
   .pets__card:nth-child(3) {
     display: none;
   }
-
   .pets__arrow {
     display: none;
   }
-
   .mobile__arrow {
     display: flex;
     align-items: center;
@@ -660,22 +692,17 @@ text-align: center;
     flex-shrink: 0;
     transition: 0.3s ease;
   }
-
   .mobile__arrow:hover {
     background: var(--color-primary-light);
     border-color: var(--color-primary-light);
   }
-
   .slider__controls-mobile {
     display: flex;
     margin-top: 20px;
     justify-content: center;
-    gap: 80px; /* по макету 80px, у вас было 60px – оставляем 80px для соответствия */
+    gap: 80px;
     width: 100%;
-    margin-top: 20px;
   }
-
-
   .pets__all {
     overflow: hidden;
     margin: 0 auto;
@@ -693,6 +720,7 @@ text-align: center;
   height: 611px;
   background: var(--color-light-xl);
 }
+
 .help__content {
   display: flex;
   flex-direction: column;
@@ -702,6 +730,7 @@ text-align: center;
   margin: 0 auto;
   padding: 80px 40px;
 }
+
 .help__title {
   font-family: var(--font-main);
   font-weight: 400;
@@ -711,12 +740,14 @@ text-align: center;
   text-align: center;
   color: var(--color-dark-l);
 }
+
 .help__list {
   display: flex;
   flex-wrap: wrap;
   gap: 55px 120px;
   max-width: 1030px;
 }
+
 .help__item {
   display: flex;
   flex-direction: column;
@@ -724,15 +755,18 @@ text-align: center;
   list-style: none;
   gap: 30px;
 }
+
 .help__icon {
   width: 60px;
   height: 60px;
   display: block;
   margin: 0 auto;
 }
+
 .help__item:nth-child(6) {
   margin-left: 84px;
 }
+
 .help__text {
   font-family: var(--font-main);
   font-weight: 400;
@@ -785,7 +819,7 @@ text-align: center;
   }
   .help__list {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); 
+    grid-template-columns: repeat(2, 1fr);
     gap: 30px;
     max-width: 290px;
     justify-items: center;
@@ -793,7 +827,7 @@ text-align: center;
   .help__item {
     width: 130px;
     height: 87px;
-    gap: 5px;
+    gap: 15px;
     align-items: center;
   }
   .help__item:nth-child(6) {
@@ -808,9 +842,6 @@ text-align: center;
     height: 50px;
     margin-bottom: 5px;
   }
-  .help__item {
-    gap: 15px;
-}
   .help__text {
     font-size: 15px;
     line-height: 110%;
@@ -819,13 +850,13 @@ text-align: center;
   }
 }
 
-
 /* Donation */
 .donation {
   width: 100%;
   background: var(--color-light-l);
   height: 462px;
 }
+
 .donation__content {
   display: flex;
   align-items: center;
@@ -835,15 +866,18 @@ text-align: center;
   padding: 80px 0;
   box-sizing: border-box;
 }
+
 .donation__dog {
   max-width: 505px;
   height: auto;
 }
+
 .donation__right {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
+
 .donation__title {
   font-family: var(--font-main);
   font-weight: 400;
@@ -852,6 +886,7 @@ text-align: center;
   letter-spacing: 0.06em;
   color: var(--color-dark-l);
 }
+
 .donation__label {
   font-family: var(--font-main);
   font-weight: 400;
@@ -860,6 +895,7 @@ text-align: center;
   letter-spacing: 0.06em;
   color: var(--color-dark-l);
 }
+
 .donation__disclaimer {
   font-family: var(--font-second);
   font-style: italic;
@@ -868,6 +904,7 @@ text-align: center;
   line-height: 18px;
   color: var(--color-dark-m);
 }
+
 .donation__card {
   display: flex;
   align-items: center;
@@ -878,11 +915,13 @@ text-align: center;
   height: 43px;
   background: var(--color-primary);
 }
+
 .donation__card-icon {
   width: 30px;
   height: 23px;
   flex-shrink: 0;
 }
+
 .donation__card-number {
   font-family: var(--font-main);
   font-weight: 400;
@@ -893,6 +932,7 @@ text-align: center;
   text-decoration: none;
   white-space: nowrap;
 }
+
 .donation__card-number:hover {
   color: var(--color-dark-3xl);
 }
@@ -917,7 +957,7 @@ text-align: center;
     justify-content: flex-start;
     padding: 42px 10px;
     max-width: 300px;
-    height: 100%; 
+    height: 100%;
   }
   .donation__dog {
     width: 260px;
@@ -929,13 +969,13 @@ text-align: center;
     gap: 20px;
     text-align: center;
     max-width: 300px;
-    width: 100%;  
+    width: 100%;
   }
   .donation__title {
-  font-size: 25px;
-  line-height: 130%;
-  letter-spacing: 0.06em;
-  text-align: center;
+    font-size: 25px;
+    line-height: 130%;
+    letter-spacing: 0.06em;
+    text-align: center;
   }
   .donation__label {
     font-size: 15px;
@@ -954,8 +994,7 @@ text-align: center;
     line-height: 150%;
     text-align: justify;
     max-width: 280px;
-    padding: 10p 0;
-    
+    padding: 10px 0;
   }
 }
 
@@ -971,6 +1010,7 @@ text-align: center;
   background-size: cover, cover;
   background-color: var(--footer-gradient-background);
 }
+
 .footer__container {
   display: flex;
   align-items: flex-start;
@@ -980,12 +1020,14 @@ text-align: center;
   padding: 40px;
   box-sizing: border-box;
 }
+
 .footer__left {
   display: flex;
   flex-direction: column;
   gap: 40px;
   padding-top: 16px;
 }
+
 .footer__right {
   display: flex;
   flex-direction: column;
@@ -994,6 +1036,7 @@ text-align: center;
   width: 302px;
   height: 234px;
 }
+
 .footer__title {
   font-family: var(--font-main);
   font-weight: 400;
@@ -1002,21 +1045,25 @@ text-align: center;
   letter-spacing: 0.06em;
   color: var(--color-light-xl);
 }
+
 .footer__contact-item,
 .footer__address-item {
   display: flex;
   align-items: center;
   gap: 20px;
 }
+
 .footer__icon {
   width: 40px;
   height: 32px;
   flex-shrink: 0;
 }
+
 .footer__address-item .footer__icon {
   width: 22px;
   height: 32px;
 }
+
 .footer__contact-item a,
 .footer__address-item a {
   font-family: var(--font-main);
@@ -1028,22 +1075,27 @@ text-align: center;
   text-decoration: none;
   transition: color 0.3s ease;
 }
+
 .footer__contact-item a:hover,
 .footer__address-item a:hover {
   color: var(--color-light-xl);
 }
+
 .footer__dog-wrapper {
   align-self: flex-end;
 }
+
 .footer__dog {
   width: 300px;
   max-width: 300px;
   height: 310px;
   object-fit: contain;
 }
+
 .break-default {
   display: inline;
 }
+
 .break-320 {
   display: none;
 }
@@ -1064,9 +1116,11 @@ text-align: center;
     width: 278px;
     padding-top: 0;
   }
-  .footer__title {
+   .footer__title {
+    margin: 0;
     width: 100%;
-    font-size: 34px;
+    font-size: 35px;
+    white-space: nowrap;
   }
   .footer__right {
     width: 302px;
@@ -1084,96 +1138,9 @@ text-align: center;
     height: 310px;
   }
 }
-.break-default {
-  display: inline;
-}
-.break-320 {
-  display: none;
-}
+
 @media (max-width: 767.98px) {
-  .footer {
-    height: 809px;
-    overflow: hidden;
-    position: relative;
-  }
-
-  .footer__container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    padding: 20px 10px 0;
-    max-width: 300px;
-    width: 100%;
-    height: 100%;
-    margin: 0 auto;
-    box-sizing: border-box;
-  }
-
-  /* Оба блока занимают 100% ширины контейнера */
-  .footer__left,
-  .footer__right {
-    width: 100%;               /* вместо max-width */
-    margin: 0 !important;
-    padding: 0 !important;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .footer__left {
-    gap: 40px;
-  }
-
-  .footer__right {
-    gap: 40px;
-    margin-top: 20px;          /* отступ между блоками */
-  }
-
-  .footer__title {
-   font-weight: 400;
-   font-size: 25px;
-   line-height: 130%;
-   letter-spacing: 0.06em;
-   text-align: center;
-    margin: 0;
-  }
-
-  .footer__contact-item,
-  .footer__address-item {
-    gap: 20px;
-    justify-content: center;
-    margin: 0;
-    width: 100%;               /* чтобы элементы занимали всю ширину */
-  }
-
-  .footer__contact-item a,
-  .footer__address-item a {
-    font-size: 20px;
-    margin: 0;
-    text-align: center;
-    word-break: break-word;    /* защита от вылезания длинных слов */
-  }
-
-  /* Собака – абсолютно, прижата к низу */
-  .footer__dog-wrapper {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 260px;
-    height: 269px;
-    margin: 0;
-    padding: 0;
-  }
-
-  .footer__dog {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-  }
-}@media (max-width: 767.98px) {
-    .break-default {
+  .break-default {
     display: none;
   }
   .break-320 {
@@ -1181,6 +1148,7 @@ text-align: center;
   }
   .footer {
     height: 809px;
+    overflow: hidden;
     position: relative;
   }
   .footer__container {
@@ -1193,20 +1161,23 @@ text-align: center;
     height: 100%;
     gap: 40px;
   }
-  .footer__left {
-    width: 100%;
-    max-width: 258px;
-    padding-right: 0;
-    align-items: center;
-    gap: 40px;
-  }
+  .footer__left,
   .footer__right {
     width: 100%;
-    max-width: 300px;
-    padding-left: 0;
-    padding-right: 0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
     align-items: center;
+  }
+  .footer__left {
     gap: 40px;
+    max-width: 258px;
+  }
+  .footer__right {
+    gap: 40px;
+    max-width: 300px;
+    margin-top: 20px;
   }
   .footer__title {
     font-weight: 400;
@@ -1214,27 +1185,33 @@ text-align: center;
     line-height: 130%;
     letter-spacing: 0.06em;
     text-align: center;
+    margin: 0;
   }
-  .footer__contact-item{
-       gap: 20px;
-    justify-content: center;
-  }
-
+  .footer__contact-item,
   .footer__address-item {
     gap: 20px;
+    justify-content: center;
+    margin: 0;
+    width: 100%;
+  }
+  .footer__contact-item {
+    justify-content: center;
+  }
+  .footer__address-item {
     justify-content: flex-start;
   }
   .footer__contact-item a,
   .footer__address-item a {
     font-size: 20px;
+    margin: 0;
+    text-align: center;
+    word-break: break-word;
   }
   .footer__address-item a {
-    font-size: 20px;
-    margin: 0;
-    white-space: nowrap;          /* текст в одну строку */
-    overflow: hidden;            /* обрезаем лишнее */
-    text-overflow: ellipsis;     /* добавляем ... если не влезает */
-    max-width: 100%;             /* не вылезает за блок */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
     display: block;
   }
   .footer__dog-wrapper {
