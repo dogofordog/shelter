@@ -793,6 +793,7 @@ body.menu-open .burger {
     height: 269px;
   }
 }
+
 /* Popup */
 .popup {
   display: none;
@@ -812,9 +813,9 @@ body.menu-open .burger {
 }
 
 .popup__outer {
-  max-width: 94vw;
-  max-height: 94vh;
-  overflow-y: auto;
+  position: relative;
+  width: 952px;
+  height: 552px;
 }
 
 .popup__close {
@@ -833,6 +834,7 @@ body.menu-open .burger {
   transition: border-color 0.3s ease;
   z-index: 10;
   padding: 0;
+  pointer-events: auto; 
 }
 
 .popup__close:hover {
@@ -853,111 +855,77 @@ body.menu-open .burger {
   background: var(--color-light-s);
   border-radius: 9px;
   box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
-  overflow: hidden;
+  display: flex;
 }
 
 .popup__img {
-  position: absolute;
-  left: 0;
-  right: 44.44%;
-  top: 0;
-  bottom: 0;
+  width: 500px;
+  height: 100%;
   object-fit: cover;
   border-radius: 9px 0 0 9px;
+  flex-shrink: 0;
 }
 
 .popup__info {
-  position: absolute;
-  left: 529px;
-  top: 50px;
   width: 351px;
-  height: 362px;
+  margin-left: 29px;
+  margin-right: 20px;
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
 }
 
 .popup__name {
-  position: absolute;
-  left: 1px;
-  top: 0;
   font-family: var(--font-main);
   font-size: 35px;
   line-height: 130%;
   letter-spacing: 0.06em;
   color: #000000;
-  margin: 0;
+  margin: 0 0 10px 0;
 }
 
 .popup__type {
-  position: absolute;
-  left: 1px;
-  top: 55px;
   font-family: var(--font-main);
   font-size: 20px;
   line-height: 115%;
   letter-spacing: 0.06em;
   color: #000000;
-  margin: 0;
+  margin: 0 0 20px 0;
 }
 
 .popup__description {
-  position: absolute;
-  left: 1px;
-  top: 118px;
-  width: 350px;
   font-family: var(--font-second);
   font-size: 15px;
   line-height: 110%;
   letter-spacing: 0.06em;
   color: #000000;
-  margin: 0;
+  margin: 0 0 40px 0;
 }
 
 .popup__list {
-  position: absolute;
-  left: 1px;
-  top: 260px;
-  width: 154px;
   list-style: none;
   padding: 0;
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
 }
 
 .popup__list-item {
-  position: absolute;
-  left: 0;
-  width: 121px;
-  height: 18px;
   display: flex;
   align-items: center;
-}
-
-.popup__list-item:nth-child(1) {
-  top: 0;
-}
-
-.popup__list-item:nth-child(2) {
-  top: 28px;
-}
-
-.popup__list-item:nth-child(3) {
-  top: 56px;
-}
-
-.popup__list-item:nth-child(4) {
-  top: 84px;
+  gap: 10px;
 }
 
 .popup__dot {
-  position: absolute;
-  left: 0;
   width: 4px;
   height: 4px;
+  min-width: 4px;
   border-radius: 50%;
   background: var(--color-primary);
 }
 
 .popup__text {
-  position: absolute;
-  left: 14px;
   font-family: var(--font-main);
   font-size: 15px;
   line-height: 110%;
@@ -974,107 +942,240 @@ body.menu-open .burger {
 .popup__parasites {
   font-weight: 700;
 }
-@media (min-width: 375px) and (max-width: 767.98px) {
+
+@media (max-width: 768px) {
+  .popup {
+    padding: 20px;
+  }
+
   .popup__outer {
+    position: relative;
     width: 682px;
-    height: 402px;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
   }
 
   .popup__close {
+    position: absolute;
     left: 621px;
     top: 0;
+    width: 52px;
+    height: 52px;
+    border: 2px solid var(--color-primary);
+    border-radius: 100px;
+    background: transparent;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    padding: 0;
+    pointer-events: auto;
+  }
+
+  .popup__close:hover {
+    border-color: var(--color-primary-light);
+  }
+
+  .popup__close svg {
+    width: 12px;
+    height: 12px;
   }
 
   .popup__content {
+    position: relative;
     left: 0;
-    top: 52px;
-    width: 630px;
-    height: 350px;
+    top: 0;
+    width: 100%;
+    height: auto;
+    background: var(--color-light-s);
+    border-radius: 9px;
+    box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+    display: flex;
+    overflow: hidden;
   }
 
   .popup__img {
-    width: auto;
-    height: 100%;
+    position: relative;
+    width: 50%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 9px 0 0 9px;
+    flex-shrink: 0;
   }
 
   .popup__info {
-    left: 361px;
-    top: 10px;
-    width: 260px;
-    height: 303px;
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 50%;
+    height: auto;
+    padding: 30px 20px 20px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .popup__name {
+    position: relative;
+    left: 0;
+    top: 0;
+    font-size: 35px;
+    line-height: 130%;
+    letter-spacing: 0.06em;
+    color: #000000;
+    margin: 0 0 10px 0;
+  }
+
+  .popup__type {
+    position: relative;
+    left: 0;
+    top: 0;
+    font-size: 20px;
+    line-height: 115%;
+    letter-spacing: 0.06em;
+    color: #000000;
+    margin: 0 0 20px 0;
   }
 
   .popup__description {
-    top: 98px;
-    width: 260px;
-    height: 98px;
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
     font-size: 13px;
+    line-height: 140%;
+    letter-spacing: 0.06em;
+    color: #000000;
+    margin: 0 0 20px 0;
   }
 
   .popup__list {
-    top: 216px;
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
   }
 
-  .popup__list-item:nth-child(1) { top: 0; }
-  .popup__list-item:nth-child(2) { top: 23px; }
-  .popup__list-item:nth-child(3) { top: 46px; }
-  .popup__list-item:nth-child(4) { top: 69px; }
+  .popup__list-item {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .popup__dot {
+    position: relative;
+    left: 0;
+    width: 4px;
+    height: 4px;
+    min-width: 4px;
+    border-radius: 50%;
+    background: var(--color-primary);
+  }
+
+  .popup__text {
+    position: relative;
+    left: 0;
+    width: auto;
+    font-size: 15px;
+    line-height: 130%;
+    letter-spacing: 0.06em;
+    color: #000000;
+  }
+
+  .popup__age { font-weight: 400; }
+  .popup__inoculations,
+  .popup__diseases,
+  .popup__parasites { font-weight: 700; }
 }
 
-@media (min-width: 320px) and (max-width: 374.98px) {
+@media (max-width: 374.98px) {
+  .popup { padding: 20px; }
+
   .popup__outer {
     width: 270px;
-    height: 393px;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
   }
 
   .popup__close {
-    left: 218px;
+    left: auto;
+    right: 0;
     top: 0;
+    width: 35px;
+    height: 35px;
+  }
+
+  .popup__close svg {
+    width: 10px;
+    height: 10px;
   }
 
   .popup__content {
+    position: relative;
     left: 0;
-    top: 52px;
-    width: 240px;
-    height: 341px;
+    top: 0;
+    width: 100%;
+    height: auto;
+    box-shadow: none;
+    overflow: visible;
   }
 
-  .popup__img {
-    display: none;
-  }
+  .popup__img { display: none; }
 
   .popup__info {
-    position: absolute;
-    left: 10px;
-    top: 10px;
-    width: 220px;
-    height: 321px;
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+    padding: 25px 20px 20px;
   }
 
-  .popup__description {
-    top: 98px;
-    width: 220px;
-    height: 112px;
-    font-size: 13px;
-    text-align: justify;
+  .popup__name,
+  .popup__type,
+  .popup__description,
+  .popup__list,
+  .popup__list-item {
+    position: relative;
+    left: 0 !important;
+    top: 0 !important;
+    width: 100% !important;
+    height: auto !important;
   }
 
-  .popup__list {
-    top: 234px;
-  }
-
-  .popup__list-item:nth-child(1) { top: 0; }
-  .popup__list-item:nth-child(2) { top: 23px; }
-  .popup__list-item:nth-child(3) { top: 46px; }
-  .popup__list-item:nth-child(4) { top: 69px; }
+  .popup__name { font-size: 22px; margin-bottom: 8px; }
+  .popup__type { font-size: 16px; margin-bottom: 15px; }
+  .popup__description { font-size: 13px; line-height: 140%; margin-bottom: 20px; }
+  .popup__list { gap: 8px; margin-top: 20px; }
+  .popup__list-item { margin-bottom: 8px; }
+  .popup__dot { position: relative; left: 0; }
+  .popup__text { position: relative; left: 10px; font-size: 13px; }
 }
+
 .pets__cards {
   transition: opacity 0.4s ease, transform 0.4s ease;
 }
+
 .pets__cards--out {
   opacity: 0;
   transform: translateX(-30px);
 }
+
 .pets__cards--in {
   opacity: 0;
   transform: translateX(30px);
