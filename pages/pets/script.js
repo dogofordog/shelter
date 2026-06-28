@@ -1,14 +1,27 @@
-console.log('=== COZY HOUSE - SELF EVALUATION ===');
-console.log('');
-console.log('PETS PAGE (40 points):');
-console.log('✅ +10 W3C validation passed');
-console.log('✅ +5 Header matches design');
-console.log('✅ +5 Pets section matches design');
-console.log('✅ +5 Footer matches design');
-console.log('✅ +5 Layout centered at >1280px');
-console.log('✅ +5 Pet cards hover effect');
-console.log('✅ +5 Background stretches full width');
-console.log('');
-console.log('Total Pets: 40/40');
-console.log('');
-console.log('GRAND TOTAL: 110/110');
+import { loadPets } from '../../scripts/api.js';
+import { initBurger } from '../../scripts/burger.js';
+import { initPopup } from '../../scripts/popup.js';
+
+
+
+(async () => {
+  try {
+    const pets = await loadPets();
+    console.log(pets);
+    initPopup(pets);
+  } catch (error) {
+    console.log('Ошибка:', error.message);
+  }
+})();
+
+
+(async () => {
+  try {
+    const pets = await loadPets();
+    console.log(pets);
+  } catch (error) {
+    console.log('Ошибка:', error.message);
+  }
+})();
+
+initBurger();
