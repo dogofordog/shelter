@@ -16,7 +16,7 @@
   <body>
     <header class="header">
       <div class="header__container">
-        <a href="#" class="logo">
+        <a href="../main/index.html" class="logo">
           <h1 class="logo__main">Cozy House</h1>
           <p class="logo__sub">Shelter for pets in Boston</p>
         </a>
@@ -39,8 +39,32 @@
             </li>
           </ul>
         </nav>
+         <button class="burger" aria-label="Open menu">
+            <span class="burger__line"></span>
+            <span class="burger__line"></span>
+            <span class="burger__line"></span>
+        </button>
       </div>
     </header>
+    <div class="mobile_burger">
+        <ul class="nav__list">
+            <li class="nav__item">
+              <a href="../main/index.html" class="nav__link"
+                >About the shelter</a
+              >
+            </li>
+            <li class="nav__item nav__item--active">Our pets</li>
+            <li class="nav__item">
+              <a href="../main/index.html#help" class="nav__link"
+                >Help the shelter</a
+              >
+            </li>
+            <li class="nav__item">
+              <a href="#contacts" class="nav__link">Contacts</a>
+            </li>
+          </ul>
+
+      </div>
 
     <main class="main">
       <section class="pets">
@@ -49,8 +73,8 @@
             Our friends who<br />are looking for a house
           </h2>
 
-          <div class="pets__cards">
-            <div class="pets__card">
+          <div class="pets__cards" >
+            <div class="pets__card"data-pet-name="Katrine">
               <img
                 src="../../assets/images/katrine.png"
                 alt="Katrine the Cat"
@@ -59,7 +83,7 @@
               <p class="pets__name">Katrine</p>
               <a href="#" class="pets__button">Learn more</a>
             </div>
-            <div class="pets__card">
+            <div class="pets__card" data-pet-name="Jennifer">
               <img
                 src="../../assets/images/jennifer.png"
                 alt="Jennifer the Dog"
@@ -68,7 +92,7 @@
               <p class="pets__name">Jennifer</p>
               <a href="#" class="pets__button">Learn more</a>
             </div>
-            <div class="pets__card">
+            <div class="pets__card" data-pet-name="Woody">
               <img
                 src="../../assets/images/woody.png"
                 alt="Woody the Dog"
@@ -78,7 +102,7 @@
               <a href="#" class="pets__button">Learn more</a>
             </div>
 
-            <div class="pets__card">
+            <div class="pets__card" data-pet-name="Sophia">
               <img
                 src="../../assets/images/sophia.png"
                 alt="Sophia the Dog"
@@ -87,7 +111,7 @@
               <p class="pets__name">Sophia</p>
               <a href="#" class="pets__button">Learn more</a>
             </div>
-            <div class="pets__card">
+            <div class="pets__card" data-pet-name="Timmy">
               <img
                 src="../../assets/images/timmy.png"
                 alt="Timmy the Cat"
@@ -96,7 +120,7 @@
               <p class="pets__name">Timmy</p>
               <a href="#" class="pets__button">Learn more</a>
             </div>
-            <div class="pets__card">
+            <div class="pets__card" data-pet-name="Charly">
               <img
                 src="../../assets/images/charly.png"
                 alt="Charly the Dog"
@@ -106,7 +130,7 @@
               <a href="#" class="pets__button">Learn more</a>
             </div>
 
-            <div class="pets__card">
+            <div class="pets__card" data-pet-name="Scarlett">
               <img
                 src="../../assets/images/scarlett.png"
                 alt="Scarlett the Dog"
@@ -116,7 +140,7 @@
               <a href="#" class="pets__button">Learn more</a>
             </div>
 
-            <div class="pets__card">
+            <div class="pets__card" data-pet-name="Freddie">
               <img
                 src="../../assets/images/freddie.png"
                 alt="Freddie the Cat"
@@ -158,7 +182,7 @@
     <footer class="footer" id="contacts">
       <div class="footer__container">
         <div class="footer__left">
-          <h2 class="footer__title">For questions<br />and suggestions</h2>
+          <h2 class="footer__title">For questions<br class="break-default" /> and <br class="break-320" />suggestions</h2>
 
           <div class="footer__contact-item">
             <img
@@ -180,7 +204,7 @@
         </div>
 
         <div class="footer__right">
-          <h2 class="footer__title">We are waiting<br />for your visit</h2>
+          <h2 class="footer__title">We are waiting<br class="break-default" /> for <br class="break-320" />your visit</h2>
 
           <div class="footer__address-item">
             <img
@@ -218,6 +242,43 @@
         </div>
       </div>
     </footer>
-    <script src="script.js" defer></script>
-  </body>
+<div class="popup">
+  <div class="popup__outer">
+    <button class="popup__close" aria-label="Close">
+      <svg width="12" height="12" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M14 1.41L12.59 0L7 5.59L1.41 0L0 1.41L5.59 7L0 12.59L1.41 14L7 8.41L12.59 14L14 12.59L8.41 7L14 1.41Z" fill="#292929"/>
+      </svg>
+    </button>
+    <div class="popup__content">
+      <div class="popup__background"></div>
+      <img class="popup__img" src="" alt="" />
+      <div class="popup__info">
+        <h3 class="popup__name"></h3>
+        <p class="popup__type"></p>
+        <p class="popup__description"></p>
+        <ul class="popup__list">
+          <li class="popup__list-item">
+            <span class="popup__dot"></span>
+            <span class="popup__text popup__age"></span>
+          </li>
+          <li class="popup__list-item">
+            <span class="popup__dot"></span>
+            <span class="popup__text popup__inoculations"></span>
+          </li>
+          <li class="popup__list-item">
+            <span class="popup__dot"></span>
+            <span class="popup__text popup__diseases"></span>
+          </li>
+          <li class="popup__list-item">
+            <span class="popup__dot"></span>
+            <span class="popup__text popup__parasites"></span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<script type="module" src="script.js" defer></script>  
+</body>
 </html>
+

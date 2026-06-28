@@ -38,7 +38,7 @@ function initCarousel(pets) {
   }
 
   function showNextGroup() {
-    if (isAnimating) return; // игнорируем повторные клики во время анимации
+    if (isAnimating) return; 
     isAnimating = true;
 
     cardsContainer.classList.add('pets__cards--out');
@@ -57,7 +57,7 @@ function initCarousel(pets) {
     }, { once: true });
   }
 
-  renderGroup(getNextGroup()); // первая группа при загрузке
+  renderGroup(getNextGroup()); 
 
   document.addEventListener('click', (event) => {
     if (event.target.closest('.pets__arrow--right') || event.target.closest('.slider__arrow-next')) {

@@ -45,25 +45,6 @@ function initPopup(pets) {
   });
 }
 
-document.addEventListener('click', (event) => {
-  const card = event.target.closest('.pets__card');
-  if (card) {
-    // Предотвращаем переход по ссылке
-    event.preventDefault();
-    
-    const pet = pets.find((p) => p.name === card.dataset.petName);
-    if (pet) openPopup(pet);
-    return;
-  }
 
-  if (event.target.closest('.popup__close')) {
-    closePopup();
-    return;
-  }
-
-  if (event.target.closest('.popup') && !event.target.closest('.popup__content')) {
-    closePopup();
-  }
-});
 
 export { initPopup };
