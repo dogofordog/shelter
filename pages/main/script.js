@@ -1,21 +1,17 @@
-console.log('=== COZY HOUSE - SELF EVALUATION ===');
-console.log('');
-console.log('MAIN PAGE (70 points):');
-console.log('✅ +10 W3C validation passed');
-console.log('✅ +5 Logo as text (not image)');
-console.log('✅ +5 Single h1 on page');
-console.log('✅ +5 Favicon connected');
-console.log('✅ +5 Header matches design');
-console.log('✅ +5 Hero section matches design');
-console.log('✅ +5 About section matches design');
-console.log('✅ +5 Pets section matches design');
-console.log('✅ +5 Help section matches design');
-console.log('✅ +5 Donation section matches design');
-console.log('✅ +5 Footer matches design');
-console.log('✅ +5 Help via flex/grid layout');
-console.log('✅ +5 Layout centered at >1280px');
-console.log('✅ +5 Background stretches full width');
-console.log('✅ +5 Navigation and anchors work');
-console.log('✅ +5 Pet cards hover effect');
-console.log('');
-console.log('Total Main: 70/70');
+import { loadPets } from '../../scripts/api.js';
+import { initBurger } from '../../scripts/burger.js';
+import { initPopup } from '../../scripts/popup.js';
+import { initCarousel } from '../../scripts/carousel.js';
+
+(async () => {
+  try {
+    const pets = await loadPets();
+    console.log('Загружено питомцев:', pets.length);
+    
+    initPopup(pets);
+    initCarousel(pets);
+    initBurger();
+  } catch (error) {
+    console.log('Ошибка:', error.message);
+  }
+})();
